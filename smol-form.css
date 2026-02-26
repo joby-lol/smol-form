@@ -1,0 +1,93 @@
+/*
+A sort of unopinionated bare-minimum styling setup for getting smolForm forms to look nice.
+ */
+
+.smol-form {
+  background-color: #fafafa;
+  color: #000;
+  padding: 0.5em;
+}
+
+.smol-field {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  background: rgba(127, 127, 127, 0.1);
+}
+
+.smol-field--disabled {
+  color: #999;
+}
+
+.smol-field--invalid {
+  background: rgba(127, 0, 0, 0.1);
+}
+
+.smol-form label,
+.smol-form legend {
+  font-weight: bold;
+  display: block;
+}
+
+.smol-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.smol-form__validation__message,
+.smol-field__validation__message {
+  padding: 0.25em;
+  color: #900;
+  background-color: rgba(127, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.smol-form__validation__message {
+  margin-bottom: 0.25em;
+}
+
+.smol-field__validation__message {
+  margin-top: 0.25em;
+}
+
+.smol-form__validation__message a,
+.smol-field__validation__message a {
+  color: inherit;
+}
+
+.smol-form__submit {
+  margin-top: 0.5em;
+}
+
+.smol-form .smol-multicheckbox .smol-multicheckbox__option,
+.smol-form .smol-checkbox {
+  display: flex;
+  align-items: center;
+  column-gap: 0.25em;
+}
+
+.smol-form .smol-multicheckbox .smol-multicheckbox__option {
+  font-weight: normal;
+}
+
+.smol-field__help__item {
+  margin-top: 0.25em;
+  font-size: small;
+}
+
+@media (prefers-color-scheme: dark) {
+  .smol-form {
+    background-color: #222;
+    color: #eee;
+  }
+
+  .smol-field--invalid {
+    background: rgba(255, 100, 100, 0.15);
+  }
+
+  .smol-form__validation__message,
+  .smol-field__validation__message {
+    background: rgba(255, 100, 100, 0.15);
+    color: #f66;
+  }
+}
